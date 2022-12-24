@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\pcuser\source\repos\StringToInteger\StringToInteger\main.cpp(84,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\pcuser\source\repos\StringToInteger\StringToInteger\main.cpp(100,25): warning C4244: +=: преобразование "__int64" в "int", возможна потеря данных
+  StringToInteger.vcxproj -> C:\Users\pcuser\source\repos\StringToInteger\x64\Debug\StringToInteger.exe
