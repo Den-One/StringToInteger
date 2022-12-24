@@ -3,7 +3,6 @@
 #include <algorithm>
 
 namespace leetcode {
-
 	class Solution final {
 	public:
 		int myAtoi(const std::string& s) {
@@ -81,22 +80,9 @@ namespace leetcode {
 
 			long long positionCoefficient = 1;
 			int result = 0;
+			std::uint8_t digitSign;
 			for (int i = buffer.size() - 1; i > -1; --i) {
-				std::uint8_t digitSign;
-				switch (buffer[i]) {
-					case '0': digitSign = 0; break;
-					case '1': digitSign = 1; break;
-					case '2': digitSign = 2; break;
-					case '3': digitSign = 3; break;
-					case '4': digitSign = 4; break;
-					case '5': digitSign = 5; break;
-					case '6': digitSign = 6; break;
-					case '7': digitSign = 7; break;
-					case '8': digitSign = 8; break;
-					case '9': digitSign = 9; break;
-					default:  digitSign = 0; break;
-				}
-
+				digitSign = static_cast<int>(buffer[i]) - '0';
 				result += digitSign * positionCoefficient;
 				positionCoefficient *= 10;
 			}
@@ -109,4 +95,5 @@ namespace leetcode {
 int main() {
 	leetcode::Solution solution;
 	std::cout << solution.myAtoi("123-");
+	return 0;
 }
